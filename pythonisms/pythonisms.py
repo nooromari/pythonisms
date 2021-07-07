@@ -6,18 +6,13 @@ def mydecorator(f):
         f()
         end = time.time()
         print(f'{f.__name__} end.at {end}')
-        print(f'wow it took {end-start} to finish')
+        print(f'It took {end-start} to finish')
     return log_f_as_called
 
 @mydecorator
-def sum_matrix(matrix):
-    sum = 0
-    for arr in matrix:
-      for i in arr:
-          sum+=i
-    return sum
-
-sum_matrix([[1,2,3],[4,6,0],[1,9]])
+def print_string():
+  print('This it easy function')
+print_string()
 
 
 class Node:
